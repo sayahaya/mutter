@@ -1,0 +1,18 @@
+<% provide(:title, 'Login') %>
+<div class="login">
+  <h1>Login</h1>
+  <%= form_with url: login_path, class: "form", local: true do |f| %>
+    <p class="field">
+      <%= f.email_field :email, placeholder: "Email" %>
+      <i class="fa fa-user"></i>
+    </p>
+    <p class="field">
+      <%= f.password_field :password, placeholder: "Password" %>
+      <i class="fa fa-lock"></i>
+    </p>
+    <p class="submit">
+      <%= f.submit "Login" %>
+    </p>
+　 <% end %>
+   <%= link_to "Sign up", new_user_path %>
+</div>
