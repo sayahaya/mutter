@@ -1,0 +1,10 @@
+<li id="mutter-<%= mutter.id %>">
+  <span class="user"><%= link_to mutter.user.name, mutter.user %></span>
+  <span class="content"><%= mutter.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(mutter.created_at) %> ago.
+    <% if current_user.own?(mutter) %>
+      <%= link_to "削除", mutter, method: :delete, data: { confirm: "削除しますか？"} %>
+    <% end %>
+  </span>
+</li>

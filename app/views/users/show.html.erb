@@ -7,4 +7,12 @@
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.mutters.any? %>
+      <h3>Mutters (<%= @user.mutters.count %>)</h3>
+      <ol class="mutters">
+        <%= render @mutters %>
+      </ol>
+    <% end %>
+  </div>
 </div>
