@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: %i[new create following followers]
+  skip_before_action :require_login, only: %i[new create]
 
   def index
     @users = User.all
