@@ -18,4 +18,16 @@ class User < ApplicationRecord
   def own?(object)
     object.user_id == id
   end
+
+  def follow(other_user)
+    self.follwing << other_user
+  end
+
+  def unfollow(other_user)
+    self.active_relationships.find_by(followed_id: other_user.id).destroy
+  end
+
+  def following?(other_user)
+    self.following.include?(other_user)
+  end
 end
