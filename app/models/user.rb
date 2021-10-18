@@ -20,7 +20,7 @@ class User < ApplicationRecord
   end
 
   def follow(other_user)
-    self.follwing << other_user
+    self.following << other_user
   end
 
   def unfollow(other_user)
