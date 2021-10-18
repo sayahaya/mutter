@@ -12,4 +12,5 @@ Rails.application.routes.draw do
     end
   end
   resources :mutters, only: %i[create destroy]
+  resources :relationships, only: %i[create destroy]
 end
