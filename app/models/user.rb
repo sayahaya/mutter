@@ -32,4 +32,12 @@ class User < ApplicationRecord
   def following?(other_user)
     self.following.include?(other_user)
   end
+
+  def like(mutter)
+    self.like_mutters << mutter
+  end
+
+  def unlike(mutter)
+    self.like_mutters.delete(mutter)
+  end
 end
