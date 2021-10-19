@@ -12,7 +12,7 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 255 }
 
   def feed
-    Mutter.where("user_id=?", id)
+    Mutter.where("user_id IN (?) OR user_id = ?", following_ids, id)
   end
 
   def own?(object)
