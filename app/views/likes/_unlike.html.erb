@@ -1,0 +1,3 @@
+<%= link_to like_path(current_user.like_mutters.find_by(id: mutter.id)), class:"float-right", method: :delete do %>
+  <%= icon 'fas', 'star' %>
+<% end %>

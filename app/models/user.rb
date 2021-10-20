@@ -40,4 +40,8 @@ class User < ApplicationRecord
   def unlike(mutter)
     self.like_mutters.delete(mutter)
   end
+
+  def like?(mutter)
+    self.like_mutters.include?(mutter)
+  end
 end
