@@ -1,3 +1,11 @@
-# README
+# Mutter
+ユーザーがmutter(つぶやき)を自由に投稿し、他のユーザーのmutterに対してlikeが出来るサイト
+
+# versions
+
+- Rails (6.1.4)
+- Ruby 3.0.2p107
+
+
 # ER図
-![er](https://user-images.githubusercontent.com/73504807/137082319-f39fa446-be31-4c10-89d1-1107206f38c0.png)
+![ER](https://user-images.githubusercontent.com/73504807/138239280-1f6ad09d-abee-437e-a386-d3c369da5f28.png)
