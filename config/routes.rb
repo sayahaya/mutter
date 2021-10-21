@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
-  resources :mutters, only: %i[create destroy]
+  resources :mutters, only: %i[show create destroy]
   resources :relationships, only: %i[create destroy]
   resources :likes, only: %i[create destroy]
 end
