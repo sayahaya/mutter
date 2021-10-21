@@ -5,9 +5,12 @@
     Posted <%= time_ago_in_words(mutter.created_at) %> ago.
     <%= render 'likes/like_form', mutter: mutter %>
     <%= mutter.like_users.count %>
-    <%= link_to "詳細", mutter %>
     <% if current_user.own?(mutter) %>
       <%= link_to "削除", mutter, method: :delete, data: { confirm: "削除しますか？"} %>
     <% end %>
   </span>
 </li>
+<% if @mutter.like_users.present? %>
+  <div>like Users</div>
+  <%= render @like_users %>
+<% end %>

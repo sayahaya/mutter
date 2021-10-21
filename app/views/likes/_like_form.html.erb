@@ -1,0 +1,5 @@
+<% if current_user.like?(mutter) %>
+  <%= render 'likes/unlike', mutter: mutter %>
+<% else %>
+  <%= render 'likes/like', mutter: mutter %>
+<% end  %>

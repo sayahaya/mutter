@@ -1,5 +1,10 @@
 class MuttersController < ApplicationController
   before_action :find_mutter, only: %i[destroy]
+  def show
+    @mutter = Mutter.find(params[:id])
+    @like_users = @mutter.like_users
+  end
+
   def create
     @mutter = current_user.mutters.build(mutter_params)
     if @mutter.save

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_17_061605) do
+ActiveRecord::Schema.define(version: 2021_10_19_053211) do
+
+  create_table "likes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "mutter_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["mutter_id"], name: "index_likes_on_mutter_id"
+    t.index ["user_id", "mutter_id"], name: "index_likes_on_user_id_and_mutter_id", unique: true
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
 
   create_table "mutters", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.text "content"
@@ -41,5 +51,7 @@ ActiveRecord::Schema.define(version: 2021_10_17_061605) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "likes", "mutters"
+  add_foreign_key "likes", "users"
   add_foreign_key "mutters", "users"
 end
