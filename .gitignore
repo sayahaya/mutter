@@ -6,7 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
-
+vendor/bundle
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -33,5 +33,4 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-/vender/bundle
 .DS_Store
