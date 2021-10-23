@@ -1,2 +1,2 @@
-$("#js-like-button-for-mutter-<%= @mutter.id %>").html("<%= escape_javascript(render('likes/like', mutter: @mutter)) %>");
+$("#js-like-button-for-mutter-<%= @mutter.id %>").replaceWith("<%= j(render('likes/like', mutter: @mutter)) %>");
 $("#js-like-users-for-mutter-<%= @mutter.id %>").html('<%= @mutter.like_users.count %>');
