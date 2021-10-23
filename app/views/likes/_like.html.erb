@@ -1,3 +1,3 @@
-<%= link_to likes_path(mutter_id: mutter.id), class:"float-right", method: :post do %>
+<%= link_to likes_path(mutter_id: mutter.id), id: "js-like-button-for-mutter-#{mutter.id}", class:"float-right", method: :post, remote: true do %>
   <%= icon 'far', 'star' %>
 <% end %>
