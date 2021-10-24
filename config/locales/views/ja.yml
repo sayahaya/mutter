@@ -1,0 +1,49 @@
+ja:
+  defaults:
+    title: 'Mutter'
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+    top: 'トップ'
+    users: 'ユーザー一覧'
+    help: 'ヘルプ'
+    about: 'Mutterとは'
+    contact: 'お問い合わせ'
+    show: '詳細'
+    delete: '削除'
+    post: '投稿'
+    posted: '前に投稿'
+    like_users: 'Likeしたユーザー'
+    profile: 'プロフィール'
+    following: 'フォロー'
+    followers: 'フォロワー'
+    mutter_feed: 'Mutter一覧'
+    message:
+      delete_confirm: '削除しますか？'
+  users:
+    new:
+      title: 'ユーザー登録'
+      to_login_page: 'ログインページへ'
+    index:
+      title: 'ユーザー一覧'
+    create:
+      success: 'ユーザー登録が完了しました'
+      fail: 'ユーザー登録に失敗しました'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
+    create:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+  mutters:
+    index:
+      title: '掲示板一覧'
+    new:
+      title: '掲示板作成'
+    create:
+      success: 'Mutterを投稿しました'
+      fail: 'Mutterの投稿に失敗しました'
+    destroy:
+      success: 'Mutterを削除しました'

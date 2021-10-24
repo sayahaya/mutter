@@ -8,17 +8,17 @@ class MuttersController < ApplicationController
   def create
     @mutter = current_user.mutters.build(mutter_params)
     if @mutter.save
-      redirect_to root_path, success: "mutterを投稿しました"
+      redirect_to root_path, success: t('.success')
     else
       @feed_items = current_user.feed
-      flash.now[:danger] = "mutterの投稿に失敗しました"
+      flash.now[:danger] = t('.fail')
       render 'static_pages/home'
     end
   end
 
   def destroy
     @mutter.destroy!
-    redirect_to request.referrer || root_path, success: "mutterを削除しました"
+    redirect_to request.referrer || root_path, success: t('.success')
   end
 
   private

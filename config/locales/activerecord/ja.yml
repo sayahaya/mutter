@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      mutter: 'Mutter'
+    attributes:
+      user:
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+        name: '名前'
+      relationship:
+        follow: 'フォローする'
+        unfollow: 'フォロー解除'
+      mutter:
+        post: '投稿'
+        post_message: 'Mutterを投稿しよう！'
+        content: '本文'
