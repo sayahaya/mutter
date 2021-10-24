@@ -2,14 +2,14 @@
   <span class="user"><%= link_to mutter.user.name, mutter.user %></span>
   <span class="content"><%= mutter.content %></span>
   <span class="timestamp">
-    Posted <%= time_ago_in_words(mutter.created_at) %> ago.
+    <%= time_ago_in_words(mutter.created_at) %><%= t('defaults.posted') %>
     <%= render 'likes/like_form', mutter: mutter %>
     <strong id="js-like-users-for-mutter-<%= mutter.id %>">
       <%= mutter.like_users.count %>
     </strong>
-    <%= link_to "詳細", mutter %>
+    <%= link_to t('defaults.show'), mutter %>
     <% if current_user.own?(mutter) %>
-      <%= link_to "削除", mutter, method: :delete, data: { confirm: "削除しますか？"} %>
+      <%= link_to t('defaults.delete'), mutter, method: :delete, data: { confirm: t('defaults.message.delete_confirm')} %>
     <% end %>
   </span>
 </li>

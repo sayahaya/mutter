@@ -1,6 +1,6 @@
 <%= form_with model: @mutter, local: true do |f| %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "mutterを投稿..." %>
+    <%= f.text_area :content, placeholder: Mutter.human_attribute_name(:post_message) %>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <%= f.submit Mutter.human_attribute_name(:post), class: "btn btn-primary" %>
 <% end %>
