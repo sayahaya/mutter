@@ -1,3 +1,4 @@
 <%= link_to like_path(current_user.like_mutters.find_by(id: mutter.id)), id: "js-like-button-for-mutter-#{mutter.id}", class:"float-right", method: :delete, remote: true do %>
   <%= icon 'fas', 'star' %>
+  <%= mutter.like_users.count %>
 <% end %>

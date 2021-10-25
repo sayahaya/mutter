@@ -1,3 +1,4 @@
 <%= link_to likes_path(mutter_id: mutter.id), id: "js-like-button-for-mutter-#{mutter.id}", class:"float-right", method: :post, remote: true do %>
   <%= icon 'far', 'star' %>
+  <%= mutter.like_users.count %>
 <% end %>

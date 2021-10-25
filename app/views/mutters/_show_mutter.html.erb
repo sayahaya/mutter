@@ -4,13 +4,11 @@
   <span class="timestamp">
     <%= time_ago_in_words(mutter.created_at) %><%= t('defaults.posted') %>
     <%= render 'likes/like_form', mutter: mutter %>
-    <%= mutter.like_users.count %>
     <% if current_user.own?(mutter) %>
       <%= link_to t('defaults.delete'), mutter, method: :delete, data: { confirm: t('defaults.message.delete_confirm')} %>
     <% end %>
   </span>
 </li>
-<% if @mutter.like_users.present? %>
-  <div><%= t('defaults.like_users') %></div>
-  <%= render @like_users %>
-<% end %>
+<span id="like_users_name">
+  <%= render 'likes/like_users', mutter: mutter %>
+</span>
