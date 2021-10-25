@@ -1,0 +1,2 @@
+$("li#mutter-<%= @mutter.id %>").remove()
+$("#user_mutters_count").html('<%= pluralize(current_user.mutters.count, "mutter") %>')

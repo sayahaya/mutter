@@ -7,18 +7,11 @@ class MuttersController < ApplicationController
 
   def create
     @mutter = current_user.mutters.build(mutter_params)
-    if @mutter.save
-      redirect_to root_path, success: t('.success')
-    else
-      @feed_items = current_user.feed
-      flash.now[:danger] = t('.fail')
-      render 'static_pages/home'
-    end
+    @mutter.save
   end
 
   def destroy
     @mutter.destroy!
-    redirect_to request.referrer || root_path, success: t('.success')
   end
 
   private

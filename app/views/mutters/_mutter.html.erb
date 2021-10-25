@@ -9,7 +9,7 @@
     </strong>
     <%= link_to t('defaults.show'), mutter %>
     <% if current_user.own?(mutter) %>
-      <%= link_to t('defaults.delete'), mutter, method: :delete, data: { confirm: t('defaults.message.delete_confirm')} %>
+      <%= link_to t('defaults.delete'), mutter, method: :delete, remote: true %>
     <% end %>
   </span>
 </li>
