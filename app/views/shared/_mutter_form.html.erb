@@ -1,6 +1,6 @@
-<%= form_with model: @mutter, local: true do |f| %>
+<%= form_with model: @mutter, id: 'new_mutter', local: false do |f| %>
   <div class="field">
-    <%= f.text_area :content, placeholder: Mutter.human_attribute_name(:post_message) %>
+    <%= f.text_area :content, id: "js-new-mutter-content", placeholder: Mutter.human_attribute_name(:post_message) %>
   </div>
   <%= f.submit Mutter.human_attribute_name(:post), class: "btn btn-primary" %>
 <% end %>

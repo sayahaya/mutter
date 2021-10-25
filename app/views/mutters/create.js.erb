@@ -1,0 +1,8 @@
+$("#error_messages").remove()
+<% if @mutter.errors.present? %>
+  $("#new_mutter").prepend("<%= j(render('shared/error_messages', object: @mutter)) %>")
+<% else %>
+  $("#js-mutters").prepend("<%= j(render('mutters/mutter', mutter: @mutter)) %>")
+  $("#user_mutters_count").html('<%= pluralize(current_user.mutters.count, "mutter") %>')
+  $("#js-new-mutter-content").val('')
+<% end %>
