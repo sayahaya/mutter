@@ -4,9 +4,6 @@
   <span class="timestamp">
     <%= time_ago_in_words(mutter.created_at) %><%= t('defaults.posted') %>
     <%= render 'likes/like_form', mutter: mutter %>
-    <strong id="js-like-users-for-mutter-<%= mutter.id %>">
-      <%= mutter.like_users.count %>
-    </strong>
     <%= link_to t('defaults.show'), mutter %>
     <% if current_user.own?(mutter) %>
       <%= link_to t('defaults.delete'), mutter, method: :delete, remote: true %>
