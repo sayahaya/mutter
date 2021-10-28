@@ -8,4 +8,4 @@
 
 
 # ER図
-![ER](https://user-images.githubusercontent.com/73504807/138239280-1f6ad09d-abee-437e-a386-d3c369da5f28.png)
+![ER](https://user-images.githubusercontent.com/73504807/139172160-7315ae9b-080b-4bd1-8c08-ab75effcd5e0.png)
